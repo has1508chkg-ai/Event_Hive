@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Event — Utsav</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="index.html">✦ Utsav</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a class="active" href="random.html">Random Event</a>
+        <a href="contact.html">Contact</a>
+        <a href="admin.html">Admin / Upload</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container page-main">
+    <section class="page-heading centered">
+      <p class="eyebrow">Feeling indecisive?</p>
+      <h1>Let chance choose.</h1>
+      <p>Pick a random event from the events uploaded to this browser.</p>
+      <button id="random-button" class="button button-primary" type="button">Pick an event ✨</button>
+    </section>
+
+    <section id="random-result" class="random-result" aria-live="polite">
+      <p class="empty-state">Your surprise event will appear here.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <a class="brand" href="index.html">✦ Utsav</a>
+      <p>Made for campus, by campus. <span id="current-year"></span></p>
+    </div>
+  </footer>
+</body>
+</html>

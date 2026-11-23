@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin / Upload — Utsav</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script src="upload.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="index.html">✦ Utsav</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="random.html">Random Event</a>
+        <a href="contact.html">Contact</a>
+        <a class="active" href="admin.html">Admin / Upload</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container page-main">
+    <section class="page-heading">
+      <p class="eyebrow">Browser-based event manager</p>
+      <h1>Upload your event list</h1>
+      <p>Choose an Excel workbook, check its preview, then save the events in this browser.</p>
+    </section>
+
+    <section class="form-card">
+      <h2>1. Choose an Excel file</h2>
+      <p class="body-copy">The first sheet must use the column headings shown below.</p>
+      <p class="column-list">
+        Event Name | Category | Description | Venue | Date | Time | Deadline |
+        Contact Name | Contact Phone/Email
+      </p>
+      <div class="upload-row">
+        <label class="file-label" for="excel-file">Select .xlsx file</label>
+        <input id="excel-file" type="file" accept=".xlsx,.xls">
+        <a id="download-template" class="button button-light" href="#">Download sample Excel template</a>
+      </div>
+
+      <p id="upload-message" class="form-message" role="status"></p>
+      <div id="preview-area" class="table-wrap"></div>
+      <button id="save-events" class="button button-primary" type="button" disabled>
+        Save events to this browser
+      </button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <a class="brand" href="index.html">✦ Utsav</a>
+      <p>Made for campus, by campus. <span id="current-year"></span></p>
+    </div>
+  </footer>
+</body>
+</html>

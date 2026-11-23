@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events — Utsav</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="index.html">✦ Utsav</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a class="active" href="events.html">Events</a>
+        <a href="random.html">Random Event</a>
+        <a href="contact.html">Contact</a>
+        <a href="admin.html">Admin / Upload</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container page-main">
+    <section class="page-heading">
+      <p class="eyebrow">Choose your next adventure</p>
+      <h1>Fest events</h1>
+      <p>Find an event, check the details, and register your interest.</p>
+    </section>
+
+    <div class="filter-row" aria-label="Filter events">
+      <button class="filter-button selected" type="button" data-category="all">All events</button>
+      <button class="filter-button" type="button" data-category="Cultural">Cultural</button>
+      <button class="filter-button" type="button" data-category="Non-Cultural">Non-Cultural</button>
+    </div>
+
+    <p id="event-message" class="notice" role="status"></p>
+    <div id="events-list" class="event-grid"></div>
+  </main>
+
+  <dialog id="registration-dialog" class="registration-dialog">
+    <div class="dialog-heading">
+      <div>
+        <p class="eyebrow">Join the fun</p>
+        <h2>Register your interest</h2>
+      </div>
+      <button class="close-button" id="close-registration" type="button" aria-label="Close form">×</button>
+    </div>
+    <form id="registration-form" novalidate>
+      <label for="register-event">Event</label>
+      <select id="register-event" name="event" required></select>
+
+      <label for="register-name">Name</label>
+      <input id="register-name" name="name" type="text" required>
+
+      <label for="register-email">Email</label>
+      <input id="register-email" name="email" type="email" required>
+
+      <label for="register-phone">Phone</label>
+      <input id="register-phone" name="phone" type="tel" required>
+
+      <label for="register-college">College</label>
+      <input id="register-college" name="college" type="text" required>
+
+      <p id="registration-message" class="form-message" role="status"></p>
+      <button class="button button-primary button-full" type="submit">Submit registration</button>
+      <p class="small-note">This project demonstrates form validation only; it does not send or store registrations.</p>
+    </form>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <a class="brand" href="index.html">✦ Utsav</a>
+      <p>Made for campus, by campus. <span id="current-year"></span></p>
+    </div>
+  </footer>
+</body>
+</html>
